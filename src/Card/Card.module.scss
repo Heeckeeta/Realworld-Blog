@@ -1,0 +1,141 @@
+.li{
+  width: 100%;
+  height: 140px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  box-shadow: 0px 4px 12px 0px #00000026;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 26px;
+}
+
+.header{
+  height: 50%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.info{
+  width: 70%;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.titleLikes{
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.title{
+  min-width: 30px;
+  max-width: 90%;
+  min-height: 20px;
+  overflow: hidden;
+  font-size: 20px;
+  color: #366EFF;
+  text-decoration: none;
+  margin-bottom: auto;
+  overflow: hidden;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.likeForm{
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.label{
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.like{
+  opacity: 0;
+  position: absolute;
+}
+
+.likeImg{
+  position: absolute;
+  bottom: 0px;
+  width: 18px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url('../images/notliked.svg');
+}
+
+input:checked + .likeImg{
+  background-image: url('../images/liked.svg');
+}
+
+.countLikes{
+  display: block;
+  font-size: 12px;
+  color: #000000BF;
+  margin-left: 20px;
+  margin-top: -18px;
+}
+
+.tags{
+  display: flex;
+  overflow: hidden;
+  max-height: 20px;
+}
+
+.tag{
+  height: 20px;
+  color: #00000080;
+  border: 1px solid #00000080;
+  border-radius: 2px;
+  padding: 2px 5px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  text-wrap: nowrap;
+}
+
+.userInfo{
+  margin-left: auto;
+  margin-bottom: auto;
+  max-width: 220px;
+}
+
+.name{
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  font-size: 18px;
+  color: #000000D9;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.date{
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  color: #00000080;
+  margin-top: 0px;
+}
+
+.imgWrapper{
+  width: 46px;
+  height: 46px;
+  margin-left: 12px;
+  margin-bottom: auto;
+}
+
+.img{
+  width: 46px;
+  height: 46px;
+}
+
+.text{
+  width: 682px;
+  height: 40%;
+  overflow: hidden;
+  color: #000000BF;
+}

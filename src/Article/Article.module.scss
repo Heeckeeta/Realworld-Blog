@@ -1,0 +1,194 @@
+.article{
+  width: 940px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  box-shadow: 0px 4px 12px 0px #00000026;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 26px auto 64px auto;
+}
+
+.article img {
+  max-width: 910px;
+}
+
+.header{
+  height: 50%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.info{
+  width: 70%;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.titleLikes{
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.title{
+  max-width: 90%;
+  overflow: hidden;
+  font-size: 20px;
+  color: #366EFF;
+  text-decoration: none;
+  margin-bottom: auto;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+.likeForm{
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.label{
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.like{
+  opacity: 0;
+  position: absolute;
+}
+
+.likeImg{
+  position: absolute;
+  bottom: 0px;
+  width: 18px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url('../images/notliked.svg');
+}
+
+input:checked + .likeImg{
+  background-image: url('../images/liked.svg');
+}
+
+.countLikes{
+  display: block;
+  font-size: 12px;
+  color: #000000BF;
+  margin-left: 20px;
+  margin-top: -18px;
+}
+
+.tags{
+  display: flex;
+  overflow: hidden;
+  max-height: 20px;
+}
+
+.tag{
+  height: 20px;
+  color: #00000080;
+  border: 1px solid #00000080;
+  border-radius: 2px;
+  padding: 2px 5px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  text-wrap: nowrap;
+}
+
+.userInfo{
+  margin-left: auto;
+  margin-bottom: auto;
+  max-width: 220px;
+}
+
+.name{
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  font-size: 18px;
+  color: #000000D9;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.date{
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  color: #00000080;
+  margin-top: 0px;
+}
+
+.imgWrapper{
+  width: 46px;
+  height: 46px;
+  margin-left: 12px;
+  margin-bottom: auto;
+}
+
+.img{
+  width: 46px;
+  height: 46px;
+}
+
+.buttonsWrapper{
+  display: flex;
+}
+
+.pretext{
+  width: 682px;
+  overflow-wrap: break-word;
+  color: #00000080;
+  margin: auto auto auto 0;
+}
+
+.delete{
+  box-sizing: border-box;
+  width: 78px;
+  height: 32px;
+  padding: 7px 20px;
+  margin: 0 12px auto auto;
+  border: 1px solid #F5222D;
+  border-radius: 5px;
+  color: #F5222D;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.edit{
+  box-sizing: border-box;
+  width: 65px;
+  height: 32px;
+  padding: 7px 21px;
+  margin: 0 0 auto 0;
+  border: 1px solid #52C41A;
+  border-radius: 5px;
+  color: #52C41A;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.text{
+  font-size: 14px;
+  color: #000000BF;
+  margin-bottom: 25px;
+}
+
+.spin{
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alert {
+  text-align: center;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
