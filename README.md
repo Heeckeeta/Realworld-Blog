@@ -1,1 +1,1 @@
-https://blog-9avxn56jp-heeckeetas-projects.vercel.app/
+https://blog-pizec2rbs-heeckeetas-projects.vercel.app/

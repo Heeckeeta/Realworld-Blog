@@ -27,7 +27,7 @@ export default function CreateAcc() {
   } = useForm({ mode: 'onBlur' });
 
   useEffect(() => {
-    if (!isLoggedIn) navigate('/sign-in');
+    if (!localStorage.getItem('token')) navigate('/sign-in');
     if (edited) navigate('/');
   }, [isLoggedIn, edited]);
 

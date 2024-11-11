@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Spin } from 'antd';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from '../Header/Header.js';
@@ -10,6 +9,7 @@ import CreateArticle from '../CreateArticle/CreateArticle.js';
 import SignIn from '../SignIn/SignIn.js';
 import CreateAcc from '../CreateAcc/CreateAcc.js';
 import { getByToken } from '../store/accountSlice.js';
+import { newPage } from '../store/articlesSlice.js';
 import EditProfile from '../EditProfile/EditProfile.js';
 
 import styles from './App.module.scss';
@@ -17,10 +17,14 @@ import styles from './App.module.scss';
 export default function App() {
   const dispatch = useDispatch();
   const { isLoggedIn } = useSelector((store) => store.account);
+
   useEffect(() => {
     const token = localStorage.getItem('token');
+    const page = localStorage.getItem('page');
     if (token && !isLoggedIn) dispatch(getByToken(token));
+    if (page) dispatch(newPage(page));
   }, [isLoggedIn]);
+
   return (
     <main className={styles.main}>
       <Router>

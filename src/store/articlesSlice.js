@@ -33,7 +33,10 @@ const articlesSlice = createSlice({
   },
   reducers: {
     newPage(state, action) {
-      if (state.page !== action.payload) return { ...state, page: action.payload };
+      if (state.page !== action.payload) {
+        localStorage.setItem('page', action.payload);
+        return { ...state, page: action.payload };
+      }
       return { ...state };
     },
   },

@@ -35,14 +35,15 @@ export default function Card({ article }) {
             </form>
           </div>
           <div className={styles.tags}>
-            {article.tagList.map(
-              (tag) =>
-                Boolean(tag.trim()) && (
-                  <div className={styles.tag} key={key++}>
-                    {Boolean(tag) && tag.replace(/\s\s+/g, ' ')}
-                  </div>
-                )
-            )}
+            {Boolean(article.tagList) &&
+              article.tagList.map(
+                (tag) =>
+                  Boolean(tag.trim()) && (
+                    <div className={styles.tag} key={key++}>
+                      {Boolean(tag) && tag.replace(/\s\s+/g, ' ')}
+                    </div>
+                  )
+              )}
           </div>
         </div>
         <div className={styles.userInfo}>

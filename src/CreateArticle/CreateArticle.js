@@ -34,7 +34,7 @@ export default function CreateAcc({ edit }) {
   } = useForm({ mode: 'onBlur' });
 
   useEffect(() => {
-    if (!isLoggedIn) navigate('/sign-in');
+    if (!localStorage.getItem('token')) navigate('/sign-in');
     if (slug) navigate(`/articles/${slug}`);
     if (edit && article && article.author && username === article.author.username) {
       setTag(article.tagList);
@@ -80,6 +80,9 @@ export default function CreateAcc({ edit }) {
             <input
               {...register('title', {
                 required: 'This field is required',
+                validate: (value) => {
+                  return value.trim() !== '' || 'This field must contain characters';
+                },
               })}
               defaultValue={titleValue}
               placeholder="Title"
@@ -95,6 +98,9 @@ export default function CreateAcc({ edit }) {
             <input
               {...register('description', {
                 required: 'This field is required',
+                validate: (value) => {
+                  return value.trim() !== '' || 'This field must contain characters';
+                },
               })}
               defaultValue={descriptionValue}
               placeholder="Short description"
@@ -110,6 +116,9 @@ export default function CreateAcc({ edit }) {
             <textarea
               {...register('text', {
                 required: 'This field is required',
+                validate: (value) => {
+                  return value.trim() !== '' || 'This field must contain characters';
+                },
               })}
               defaultValue={textValue}
               placeholder="Text"
